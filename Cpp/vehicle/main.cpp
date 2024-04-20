@@ -3,7 +3,7 @@
 using std::string;
 
 class Vehicle{
-private:    
+protected:    
     string manufacturer;
     int year;
     string color;
@@ -17,7 +17,6 @@ public:
         this->year = year;
         this->color = color;
     }
-
     string getManufacturer(){
         return this->manufacturer;
     }
@@ -36,6 +35,30 @@ public:
     void setColor(string color){
         this->color = color;
     }
+
+    void start(){
+        std::cout <<"The car has been started."<< std::endl;
+    }
+    void drive(){
+        std::cout <<"The car is driving."<< std::endl;
+    }
+    void stop(){
+        std::cout <<"The car has stoped."<< std::endl;
+    }
+};
+
+
+class Car : public Vehicle{
+public:
+    void openSunRoof(){
+        std::cout<<"The sunroof has been opened.";
+    }
+    Car() : Vehicle(){
+        std::cout<<" from Car.(no args const.)";
+    }
+    Car(string manufacturer, int year, string color) : Vehicle(manufacturer, year, color){
+        std::cout<<" from Car (3 args const.)";
+    }
 };
 
 int main(){
@@ -45,6 +68,9 @@ int main(){
     item1.setManufacturer("TOGG");
     std::cout <<"The manufacturer is "<<item1.getManufacturer() << std::endl; 
     
-    Vehicle item2 = Vehicle("Scoda", 2019, "White");
+    Car item2 = Car("Scoda", 2019, "White");
     std::cout<<item2.getManufacturer();
+
+    Car item3 = Car();
+    item3.openSunRoof();
 }
