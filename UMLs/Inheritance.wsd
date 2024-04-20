@@ -2,9 +2,9 @@
 title Vehicle
 
 class Vehicle{
-    -manufacturer:String
-    -year:int
-    -color:String
+    #manufacturer:String
+    #year:int
+    #color:String
     --
     +Start()
     +Drive()
