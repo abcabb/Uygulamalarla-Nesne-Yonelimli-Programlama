@@ -6,9 +6,20 @@ class Vehicle{
     #year:int
     #color:String
     --
-    +Start()
-    +Drive()
-    +Stop()
+    +getManufacturer():void
+    +getYear():void
+    +getColor():void
+    +setManufacturer():void
+    +setYear():void
+    +setColor():void
+    --
+    +Vehicle()
+    +Vehicle(manufacturer:string, year:int, color:string)
+    --
+    +Start():void
+    +Drive():void
+    +Stop():void
+    +toString():string
 }
 
 class Car extends Vehicle{

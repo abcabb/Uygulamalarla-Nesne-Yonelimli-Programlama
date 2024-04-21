@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string> 
 
 using std::string;
 
@@ -45,6 +46,9 @@ public:
     }
     virtual void stop(){
         std::cout <<"The car has stoped."<< std::endl;
+    }
+    virtual string toString(){
+        return this->manufacturer + " - " + std::to_string(this->year) + " - " + this->color;
     }
 };
 
@@ -118,26 +122,33 @@ int main(){
 
     Vehicle item1 = Vehicle();
     item1.setManufacturer("TOGG");
-    std::cout <<"The manufacturer is "<<item1.getManufacturer() << std::endl; 
+    item1.setYear(2023);
+    item1.setColor("Navy Blue");
+    std::cout <<item1.toString()<< std::endl; 
     
     Car item2 = Car("Scoda", 2019, "White");
-    std::cout<<item2.getManufacturer();
+    std::cout <<item2.toString()<< std::endl; 
 
     Car item3 = Car();
     item3.openSunRoof();
+    std::cout <<item3.toString()<< std::endl; 
 
     Truck item4 = Truck();
     item4.transport();
+    std::cout <<item4.toString()<< std::endl; 
 
     Truck item5 = Truck("MAN", 2020, "White");
     item5.start();
+    std::cout <<item5.toString()<< std::endl; 
 
     Bus item6 = Bus("Fiat", 2022, "White");
     item6.scheduling();
+    std::cout <<item6.toString()<< std::endl; 
 
     SchoolBus item7 = SchoolBus("Mercedes", 2023, "White");
     item7.scheduling();
     item7.getFare();
+    std::cout <<item7.toString()<< std::endl; 
 
     item2.start();
     item2.stop();
@@ -151,4 +162,6 @@ int main(){
     item6.stop();
     item7.start();
     item7.stop();
+
+
 }
