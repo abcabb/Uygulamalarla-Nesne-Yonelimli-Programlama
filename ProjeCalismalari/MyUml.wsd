@@ -1,0 +1,36 @@
+@startuml
+title Project5_11 UML Diagram
+
+class Person{
+    #name:string
+    #age:int
+    --
+    +Person()
+    +Person(name:string, age:int)
+    --
+    +getName():string
+    +setName(name:string):void
+    +getAge():int
+    +setAge(age:int):void
+    --
+    +giveInfo():void
+}
+
+class Student extends Person{
+    -studentNo:int
+    --
+    Student(name:string, age:int, studentNo:int)
+    --
+    +giveInfo():void
+}
+
+class Teacher extends Person{
+    -lessonOfTeacher:string
+    --
+    Teacher(name:string, age:int, studentNo:int)
+    --
+    +giveInfo():void
+}
+
+hide empty member
+@enduml
