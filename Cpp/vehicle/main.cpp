@@ -47,17 +47,52 @@ public:
     }
 };
 
-
 class Car : public Vehicle{
 public:
     void openSunRoof(){
-        std::cout<<"The sunroof has been opened.";
+        std::cout<<"The sunroof has been opened."<<std::endl;
     }
     Car() : Vehicle(){
-        std::cout<<" from Car.(no args const.)";
+        std::cout<<" from Car.(no args const.)"<<std::endl;
     }
     Car(string manufacturer, int year, string color) : Vehicle(manufacturer, year, color){
-        std::cout<<" from Car (3 args const.)";
+        std::cout<<" from Car (3 args const.)"<<std::endl;
+    }
+};
+
+class Truck : public Vehicle{
+public:
+    void transport(){
+        std::cout<<"The items has been transported."<<std::endl;
+    }
+    Truck() : Vehicle(){
+        std::cout<<" from Truck class with no args constructor."<<std::endl;
+    }
+
+    Truck(string manufacturer, int year, string color) : Vehicle(manufacturer, year, color){
+        std::cout<<" from Truck class with 3 args constructor."<<std::endl;
+    }
+};
+
+class Bus : public Vehicle{
+public:
+    Bus(string manufacturer, int year, string color) : Vehicle(manufacturer, year, color){
+        std::cout<<" from Bus class with 3 args constructor."<<std::endl;
+    }
+
+    void scheduling(){
+        std::cout<<"Scheduled."<<std::endl;
+    }
+};
+
+class SchoolBus : public Bus{
+public:
+    SchoolBus(string manufacturer, int year, string color) : Bus(manufacturer, year, color){
+        std::cout<<" from SchoolBus class from 3 args constructor."<<std::endl;
+    }
+
+    void getFare(){
+        std::cout<<"Fare done."<<std::endl;
     }
 };
 
@@ -73,4 +108,17 @@ int main(){
 
     Car item3 = Car();
     item3.openSunRoof();
+
+    Truck item4 = Truck();
+    item4.transport();
+
+    Truck item5 = Truck("MAN", 2020, "White");
+    item5.start();
+
+    Bus item6 = Bus("Fiat", 2022, "White");
+    item6.scheduling();
+
+    SchoolBus item7 = SchoolBus("Mercedes", 2023, "White");
+    item7.scheduling();
+    item7.getFare();
 }
