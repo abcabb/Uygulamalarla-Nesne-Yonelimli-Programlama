@@ -36,13 +36,14 @@ public:
         this->color = color;
     }
 
-    void start(){
+    /* virtual keyword means this function might run into a change in child classes. (overriding)(polymorphism)*/
+    virtual void start(){
         std::cout <<"The car has been started."<< std::endl;
     }
-    void drive(){
+    virtual void drive(){
         std::cout <<"The car is driving."<< std::endl;
     }
-    void stop(){
+    virtual void stop(){
         std::cout <<"The car has stoped."<< std::endl;
     }
 };
@@ -58,6 +59,10 @@ public:
     Car(string manufacturer, int year, string color) : Vehicle(manufacturer, year, color){
         std::cout<<" from Car (3 args const.)"<<std::endl;
     }
+
+    void start() override{
+        std::cout<<"The car manufactured by "<<this->manufacturer<<" is being driven."<<std::endl;
+    }
 };
 
 class Truck : public Vehicle{
@@ -72,6 +77,10 @@ public:
     Truck(string manufacturer, int year, string color) : Vehicle(manufacturer, year, color){
         std::cout<<" from Truck class with 3 args constructor."<<std::endl;
     }
+
+    void start() override{
+        std::cout<<"The truck manufactured by "<<this->manufacturer<<" is being driven."<<std::endl;
+    }
 };
 
 class Bus : public Vehicle{
@@ -83,6 +92,10 @@ public:
     void scheduling(){
         std::cout<<"Scheduled."<<std::endl;
     }
+
+    void start() override{
+        std::cout<<"The bus manufactured by "<<this->manufacturer<<" is being driven."<<std::endl;
+    }
 };
 
 class SchoolBus : public Bus{
@@ -93,6 +106,10 @@ public:
 
     void getFare(){
         std::cout<<"Fare done."<<std::endl;
+    }
+
+    void start() override{
+        std::cout<<"The schoolbus manufactured by "<<this->manufacturer<<" is being driven."<<std::endl;
     }
 };
 
@@ -121,4 +138,17 @@ int main(){
     SchoolBus item7 = SchoolBus("Mercedes", 2023, "White");
     item7.scheduling();
     item7.getFare();
+
+    item2.start();
+    item2.stop();
+    item3.start();
+    item3.stop();
+    item4.start();
+    item4.stop();
+    item5.start();
+    item5.stop();
+    item6.start();
+    item6.stop();
+    item7.start();
+    item7.stop();
 }
