@@ -1,0 +1,35 @@
+@startuml
+interface Instrument{
+    +start():void
+}
+
+interface ElectronicInstrument{
+    +tune():void
+}
+
+interface KeyboardInstrument{
+    +press():void
+}
+
+class Guitar{
+    +start():void
+    +adjustTrim():void
+}
+
+class Piano{
+    +start():void
+}
+
+class Orchestra{
+    -instruments: Instrument[]
+    --
+    +playAll()
+}
+
+Guitar .up-|> Instrument : <<implements>>
+Guitar .up-|> ElectronicInstrument : <<implements>>
+Piano .up-|> Instrument : <<implements>>
+Piano .up-|> KeyboardInstrument : <<implements>>
+
+hide empty members
+@enduml
