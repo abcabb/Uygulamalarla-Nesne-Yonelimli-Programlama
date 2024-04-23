@@ -22,9 +22,9 @@ class SecuritySystem{
 }
 
 Appliance .-up-|> Controllable :  <<implements>>
-Light -up-> Appliance : <<inheritance>>
-Thermostat -up-> Appliance : <<inheritance>>
-SecuritySystem -up-> Appliance : <<inheritance>>
+Light -up-|> Appliance : <<inheritance>>
+Thermostat -up-|> Appliance : <<inheritance>>
+SecuritySystem -up-|> Appliance : <<inheritance>>
 
 hide empty members
 @enduml
