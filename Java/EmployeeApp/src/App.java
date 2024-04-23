@@ -4,21 +4,25 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        List<Integer> numbers = Arrays.asList(60, 70, 40, 90, 80); 
+        List<Employee> employees = Arrays.asList(
+            new Employee("Ali Şen", 21d), 
+        new Employee("Veli Demir", 28d), 
+        new Employee("Niğde Bakır", 22d), 
+        new Employee("Sıla Aslı", 24d), 
+        new Employee("Mehmet Yozgat", 27d)); 
 
-        for(Integer number : numbers){
-            System.out.println(number);
+        for(Employee employee : employees){
+            System.out.println(employee);
         }
 
         System.out.println("---------------");
-        Collections.sort(numbers);
+        Collections.sort(employees);
 
-        showList(numbers);
+        showList(employees);
     }
-
-    private static void showList(List<Integer> listX){
-        for(Integer number : listX){
-            System.out.println(number);
+    private static void showList(Iterable listX){
+        for(Object employee : listX){
+            System.out.println(employee);
         }
     }
 }
