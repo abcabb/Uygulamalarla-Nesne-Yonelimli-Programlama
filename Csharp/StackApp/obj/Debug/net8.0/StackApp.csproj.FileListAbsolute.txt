@@ -1,0 +1,15 @@
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\bin\Debug\net8.0\StackApp.exe
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\bin\Debug\net8.0\StackApp.deps.json
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\bin\Debug\net8.0\StackApp.runtimeconfig.json
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\bin\Debug\net8.0\StackApp.dll
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\bin\Debug\net8.0\StackApp.pdb
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.AssemblyInfoInputs.cache
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.AssemblyInfo.cs
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.csproj.CoreCompileInputs.cache
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.sourcelink.json
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.dll
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\refint\StackApp.dll
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.pdb
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\StackApp.genruntimeconfig.cache
+C:\Uygulamalarla-Nesne-Yonelimli-Programlama\Csharp\StackApp\obj\Debug\net8.0\ref\StackApp.dll

@@ -5,7 +5,7 @@ public class Bank extends Account{
     public static List<String> transactionHistory = new ArrayList<>();
     
     public void displayBankInfo(){
-        transactionHistory.toString();
+        
     } 
     
     public static void trackTransaction(String description){
