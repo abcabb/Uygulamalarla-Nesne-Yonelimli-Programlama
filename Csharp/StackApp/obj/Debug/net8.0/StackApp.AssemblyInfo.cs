@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StackApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cba7e456d4006faba2664e0e44db55735418e9f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1482e020243a6a362a4f84313495f1b611b7bf47")]
 [assembly: System.Reflection.AssemblyProductAttribute("StackApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StackApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

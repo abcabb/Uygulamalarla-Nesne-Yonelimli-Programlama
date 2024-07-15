@@ -1,0 +1,29 @@
+@startuml
+
+interface IStack<T>{
+    +push(item:T)
+    +pop():T
+    +peek():T
+}
+
+class LinkedListStack<T>{
+    -Collection: T[]
+    --
+    +push(item:T)
+    +pop():T
+    +peek():T
+}
+
+class ListStack<T>{
+    -Collection: T[]
+    --
+    +push(item:T)
+    +pop():T
+    +peek():T
+}
+ 
+LinkedListStack -up-|> IStack : <<implements>>
+ListStack -up-|> IStack : <<implements>>
+
+hide empty members
+@enduml
