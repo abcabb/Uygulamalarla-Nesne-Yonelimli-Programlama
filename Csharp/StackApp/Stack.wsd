@@ -21,9 +21,17 @@ class ListStack<T>{
     +pop():T
     +peek():T
 }
+
+class Stack<T>{
+    -stack:IStack[]
+    +push(item:T)
+    +pop():T
+    +peek():T
+}
  
-LinkedListStack -up-|> IStack : <<implements>>
-ListStack -up-|> IStack : <<implements>>
+LinkedListStack -.l-|> IStack : <<implements>>
+ListStack -.r-|> IStack : <<implements>>
+Stack -.d-|> IStack : <<implements>>
 
 hide empty members
 @enduml
