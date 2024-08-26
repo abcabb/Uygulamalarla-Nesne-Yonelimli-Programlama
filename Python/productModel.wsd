@@ -16,6 +16,8 @@ class Product{
     +Product(name:string, price:float, quantity:int) 
     --
     +getTotalPrice():float
+    --
+    +toString():string
 }
 
 class Object{

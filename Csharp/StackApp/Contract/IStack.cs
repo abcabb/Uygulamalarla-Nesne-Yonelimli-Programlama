@@ -1,7 +1,7 @@
 namespace StackApp.Contract;
 
-public interface IStack{
-    void Push(Object item);
+public interface IStack<T>{
+    void Push(T item);
     Object Pop();
     Object Peek();
 }

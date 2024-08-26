@@ -2,17 +2,17 @@ using StackApp.Contract;
 
 namespace StackApp.Models;
 
-public class ListStack : IStack
+public class ListStack<T> : IStack<T>
 {
-    private List<Object> _collection;
+    private List<T> _collection;
     private int _lastIndex => this._collection.Count - 1;
 
     public ListStack(){
-        this._collection = new List<object>();
+        this._collection = new List<T>();
     }
 
-    public ListStack(IEnumerable<String> collection) : this(){
-        foreach(String item in collection){
+    public ListStack(IEnumerable<T> collection) : this(){
+        foreach(T item in collection){
             Push(item);
         }
     }
@@ -29,7 +29,7 @@ public class ListStack : IStack
         return temp;
     }
 
-    public void Push(object item)
+    public void Push(T item)
     {
         this._collection.Add(item);
     }

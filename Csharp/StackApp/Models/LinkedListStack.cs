@@ -2,16 +2,16 @@ using StackApp.Contract;
 
 namespace StackApp.Models;
 
-public class LinkedListStack : IStack
+public class LinkedListStack<T> : IStack<T>
 {
-    private LinkedList<Object> _collection;
+    private LinkedList<T> _collection;
 
     public LinkedListStack(){
-        this._collection = new LinkedList<object>();
+        this._collection = new LinkedList<T>();
     }
 
-    public LinkedListStack(IEnumerable<int> collection) : this(){
-        foreach(var item in collection){
+    public LinkedListStack(IEnumerable<T> collection) : this(){
+        foreach(T item in collection){
             Push(item);
         }
     }
@@ -28,7 +28,7 @@ public class LinkedListStack : IStack
         return temp;
     }
 
-    public void Push(object item)
+    public void Push(T item)
     {
         this._collection.AddFirst(item);
     }
